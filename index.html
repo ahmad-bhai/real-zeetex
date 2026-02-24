@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeetex | Digital Trading Platform</title>
+    <style>
+        /* Reset aur Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        
+        body, html {
+            width: 100%;
+            background: #06121e; /* Dark background as per image */
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Video Background */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.12; /* Halka texture effect */
+        }
+
+        /* Header - Ab yeh scroll hoga (Absolute) */
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            z-index: 10;
+        }
+
+        .logo-link { display: inline-block; text-decoration: none; }
+        .logo-svg { width: 50px; height: 50px; cursor: pointer; }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-link {
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        /* Log in Button */
+        .login-btn { background: #1c262f; color: #fff; }
+        .login-btn:hover { background: #2a3541; }
+
+        /* Sign up Button */
+        .signup-btn { background: #0faf59; color: #fff; }
+        .signup-btn:hover { background: #0c9b4e; }
+
+        /* Burger Menu (Sirf design ke liye jaise image mein hai) */
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .menu-icon span { width: 30px; height: 3px; background: white; border-radius: 2px; }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 20px 60px;
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 6vw, 48px);
+            font-weight: 700;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #b0b8c1;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        /* Create Free Account Button */
+        .cta-btn {
+            background: #0faf59;
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 45px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            display: inline-block;
+            transition: 0.3s;
+            margin-bottom: 15px;
+        }
+
+        .cta-btn:hover { background: #12c766; transform: scale(1.02); }
+
+        .hero small {
+            display: block;
+            color: #7a8694;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Platform Image */
+        .dashboard-preview {
+            width: 100%;
+            max-width: 750px;
+            margin: 60px auto 20px;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* Features Section */
+        .features {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .features h2 { font-size: 36px; margin-bottom: 20px; }
+        .features p { color: #b0b8c1; max-width: 550px; margin: 0 auto; font-size: 17px; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            header { padding: 15px 20px; }
+            .hero { padding-top: 120px; }
+            .hero h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="bg-video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <a href="https://real-zeetex.vercel.app" class="logo-link">
+            <svg class="logo-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M170,50 L330,50 L450,170 L450,330 L330,450 L170,450 L50,330 L50,170 Z" 
+                      fill="none" stroke="white" stroke-width="12"/>
+                <path d="M175,65 L325,65 L435,175 L435,325 L325,435 L175,435 L65,325 L65,175 Z" 
+                      fill="none" stroke="white" stroke-width="6"/>
+                <polygon points="250,110 285,220 400,220 307,288 342,398 250,330 158,398 193,288 100,220 215,220" 
+                         fill="white"/>
+            </svg>
+        </a>
+
+        <div class="header-actions">
+            <a href="https://real-zeetex.vercel.app/log-in" class="btn-link login-btn">Log in</a>
+            <a href="https://real-zeetex.vercel.app/sign-up" class="btn-link signup-btn">Sign up</a>
+            
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Innovative platform for smart investments</h1>
+        <p>Sign up and get 10,000 USD to your demo account to learn how to trade.</p>
+        
+        <a href="https://real-zeetex.vercel.app/sign-up/" class="cta-btn">Create a free account</a>
+        
+        <small>* The minimum deposit amount to start real trading is 10 USD</small>
+
+        <img src="main.platform.png" alt="Trading Platform Preview" class="dashboard-preview">
+    </section>
+
+    <section class="features">
+        <h2>Features of the platform</h2>
+        <p>We regularly improve our platform to make your trading comfortable and safe.</p>
+    </section>
+
+</body>
+</html>
