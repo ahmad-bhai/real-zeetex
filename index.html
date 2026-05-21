@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeetex | Digital Trading Platform</title>
- <link rel="apple-touch-icon" sizes="180x180" href="zeetex-logo.png">
+    <title>Zeetex | Official Trading Bot Platform</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="zeetex-logo.png">
     <link rel="apple-touch-icon" sizes="152x152" href="zeetex-logo.png">
     <link rel="apple-touch-icon" sizes="120x120" href="zeetex-logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="zeetex-logo.png">
@@ -16,7 +16,7 @@
         
         body, html {
             width: 100%;
-            background: #06121e; /* Dark background as per image */
+            background: #06121e; /* Dark premium background */
             color: #fff;
             overflow-x: hidden;
         }
@@ -39,7 +39,7 @@
             opacity: 0.12; /* Halka texture effect */
         }
 
-        /* Header - Ab yeh scroll hoga (Absolute) */
+        /* Header - Fixed to absolute for smooth structure */
         header {
             position: absolute;
             top: 0;
@@ -52,7 +52,7 @@
         }
 
         .logo-link { display: inline-block; text-decoration: none; }
-        .logo-svg { width: 50px; height: 50px; cursor: pointer; }
+        .logo-svg { width: 55px; height: 55px; cursor: pointer; }
 
         .header-actions {
             display: flex;
@@ -69,23 +69,13 @@
             transition: 0.3s;
         }
 
-        /* Log in Button */
-        .login-btn { background: #1c262f; color: #fff; }
-        .login-btn:hover { background: #2a3541; }
+        /* Support Button (Zamani login button converted) */
+        .support-btn { background: #1c262f; color: #fff; border: 1px solid rgba(255, 0, 0, 0.2); }
+        .support-btn:hover { background: #ff0000; color: #fff; border-color: #ff0000; box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); }
 
-        /* Sign up Button */
-        .signup-btn { background: #0faf59; color: #fff; }
-        .signup-btn:hover { background: #0c9b4e; }
-
-        /* Burger Menu (Sirf design ke liye jaise image mein hai) */
-        .menu-icon {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            cursor: pointer;
-            margin-left: 10px;
-        }
-        .menu-icon span { width: 30px; height: 3px; background: white; border-radius: 2px; }
+        /* Channel Button (Zamani signup button converted) */
+        .channel-btn { background: #ff0000; color: #fff; }
+        .channel-btn:hover { background: #cc0000; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); }
 
         /* Hero Section */
         .hero {
@@ -100,6 +90,11 @@
             font-weight: 700;
             margin-bottom: 25px;
             line-height: 1.2;
+            color: #ffffff;
+        }
+        
+        .hero h1 span {
+            color: #ff0000; /* Red highlight for Auto Trading system */
         }
 
         .hero p {
@@ -109,9 +104,9 @@
             line-height: 1.5;
         }
 
-        /* Create Free Account Button */
+        /* Create Free Account / Start Bot Button */
         .cta-btn {
-            background: #0faf59;
+            background: #ff0000;
             color: #fff;
             text-decoration: none;
             padding: 16px 45px;
@@ -121,9 +116,10 @@
             display: inline-block;
             transition: 0.3s;
             margin-bottom: 15px;
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
         }
 
-        .cta-btn:hover { background: #12c766; transform: scale(1.02); }
+        .cta-btn:hover { background: #ff2a2a; transform: scale(1.02); box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5); }
 
         .hero small {
             display: block;
@@ -139,7 +135,8 @@
             margin: 60px auto 20px;
             display: block;
             border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255, 0, 0, 0.1);
         }
 
         /* Features Section */
@@ -149,13 +146,15 @@
         }
 
         .features h2 { font-size: 36px; margin-bottom: 20px; }
-        .features p { color: #b0b8c1; max-width: 550px; margin: 0 auto; font-size: 17px; }
+        .features p { color: #b0b8c1; max-width: 600px; margin: 0 auto; font-size: 17px; line-height: 1.6; }
 
         /* Mobile Adjustments */
         @media (max-width: 600px) {
             header { padding: 15px 20px; }
             .hero { padding-top: 120px; }
             .hero h1 { font-size: 28px; }
+            .header-actions { gap: 8px; }
+            .btn-link { padding: 8px 14px; font-size: 13px; }
         }
     </style>
 </head>
@@ -168,41 +167,34 @@
     </div>
 
     <header>
-        <a href="https://real-zeetex.vercel.app" class="logo-link">
-            <svg class="logo-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                <path d="M170,50 L330,50 L450,170 L450,330 L330,450 L170,450 L50,330 L50,170 Z" 
-                      fill="none" stroke="white" stroke-width="12"/>
-                <path d="M175,65 L325,65 L435,175 L435,325 L325,435 L175,435 L65,325 L65,175 Z" 
-                      fill="none" stroke="white" stroke-width="6"/>
-                <polygon points="250,110 285,220 400,220 307,288 342,398 250,330 158,398 193,288 100,220 215,220" 
-                         fill="white"/>
+        <a href="https://real-zeetex.vercel.app/" target="_blank" class="logo-link">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="30,5 70,5 95,30 95,70 70,95 30,95 5,70 5,30" fill="none" stroke="#ff0000" stroke-width="2.5"/>
+                <polygon points="31.5,7.5 68.5,7.5 92.5,31.5 92.5,68.5 68.5,92.5 31.5,92.5 7.5,68.5 7.5,31.5" fill="none" stroke="#ff0000" stroke-width="0.8"/>
+                <polygon points="50,20 57.5,41 82,41 62,55.5 69.5,76.5 50,62.5 30.5,76.5 38,55.5 18,41 42.5,41" fill="#ff0000"/>
             </svg>
         </a>
 
         <div class="header-actions">
-            <a href="https://real-zeetex.vercel.app/log-in" class="btn-link login-btn">Log in</a>
-            <a href="https://real-zeetex.vercel.app/sign-up" class="btn-link signup-btn">Sign up</a>
-            
-                <span></span>
-                <span></span>
-            </div>
+            <a href="https://t.me/zeetexsupport" target="_blank" class="btn-link support-btn">Official Support</a>
+            <a href="https://t.me/Zeetex_io" target="_blank" class="btn-link channel-btn">Official Channel</a>
         </div>
     </header>
 
     <section class="hero">
-        <h1>Innovative platform for smart investments</h1>
-        <p>Sign up and get 10,000 USD to your demo account to learn how to trade.</p>
+        <h1>Innovative Official <span>Auto-Trading</span> Bot System</h1>
+        <p>No manual trades required. Zeetex lightning-fast bot automatically executes optimal trades for you instantly, optimized to run perfectly even on slow internet connections.</p>
         
-        <a href="https://real-zeetex.vercel.app/sign-up/" class="cta-btn">Create a free account</a>
+        <a href="https://t.me/Zeetex_Trading_Bot?start=8634059862" target="_blank" class="cta-btn">Start Free Auto-Trading Bot</a>
         
-        <small>* The minimum deposit amount to start real trading is 10 USD</small>
+        <small>* Secure ecosystem integrated by Magic Scripts. No third-party extensions required.</small>
 
-        <img src="main.platform.png" alt="Trading Platform Preview" class="dashboard-preview">
+        <img src="main.platform.png" alt="Zeetex Trading Platform Preview" class="dashboard-preview">
     </section>
 
     <section class="features">
-        <h2>Features of the platform</h2>
-        <p>We regularly improve our platform to make your trading comfortable and safe.</p>
+        <h2>Performance & Absolute Safety</h2>
+        <p>We have completely transitioned to a standalone Telegram bot engine to save bandwidth, eliminate execution delays, and secure your accounts from malicious third-party scripts.</p>
     </section>
 
 </body>
