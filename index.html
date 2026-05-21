@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeetex | Official Trading Bot Platform</title>
+    <title>Zeetex | Digital Trading Bot</title>
     <link rel="apple-touch-icon" sizes="180x180" href="zeetex-logo.png">
     <link rel="apple-touch-icon" sizes="152x152" href="zeetex-logo.png">
     <link rel="apple-touch-icon" sizes="120x120" href="zeetex-logo.png">
@@ -16,7 +16,7 @@
         
         body, html {
             width: 100%;
-            background: #06121e; /* Dark premium background */
+            background: #06121e; /* Dark background */
             color: #fff;
             overflow-x: hidden;
         }
@@ -39,7 +39,7 @@
             opacity: 0.12; /* Halka texture effect */
         }
 
-        /* Header - Fixed to absolute for smooth structure */
+        /* Header - Fixed & Fluid layout */
         header {
             position: absolute;
             top: 0;
@@ -69,17 +69,17 @@
             transition: 0.3s;
         }
 
-        /* Support Button (Zamani login button converted) */
+        /* Official Support Button (Upgraded) */
         .support-btn { background: #1c262f; color: #fff; border: 1px solid rgba(255, 0, 0, 0.2); }
-        .support-btn:hover { background: #ff0000; color: #fff; border-color: #ff0000; box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); }
+        .support-btn:hover { background: #ff0000; color: #fff; box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); }
 
-        /* Channel Button (Zamani signup button converted) */
+        /* Official Channel Button (Upgraded) */
         .channel-btn { background: #ff0000; color: #fff; }
-        .channel-btn:hover { background: #cc0000; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); }
+        .channel-btn:hover { background: #d60000; box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); }
 
         /* Hero Section */
         .hero {
-            padding: 160px 20px 60px;
+            padding: 180px 20px 60px;
             text-align: center;
             max-width: 850px;
             margin: 0 auto;
@@ -90,11 +90,6 @@
             font-weight: 700;
             margin-bottom: 25px;
             line-height: 1.2;
-            color: #ffffff;
-        }
-        
-        .hero h1 span {
-            color: #ff0000; /* Red highlight for Auto Trading system */
         }
 
         .hero p {
@@ -104,7 +99,7 @@
             line-height: 1.5;
         }
 
-        /* Create Free Account / Start Bot Button */
+        /* Open Official Bot Button */
         .cta-btn {
             background: #ff0000;
             color: #fff;
@@ -116,10 +111,10 @@
             display: inline-block;
             transition: 0.3s;
             margin-bottom: 15px;
-            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
         }
 
-        .cta-btn:hover { background: #ff2a2a; transform: scale(1.02); box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5); }
+        .cta-btn:hover { background: #ff2a2a; transform: scale(1.02); box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5); }
 
         .hero small {
             display: block;
@@ -128,30 +123,44 @@
             margin-top: 10px;
         }
 
-        /* Platform Image */
+        /* Platform Image Mockup preview */
         .dashboard-preview {
             width: 100%;
             max-width: 750px;
             margin: 60px auto 20px;
             display: block;
             border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-            border: 1px solid rgba(255, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
 
         /* Features Section */
         .features {
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px 40px;
         }
 
         .features h2 { font-size: 36px; margin-bottom: 20px; }
-        .features p { color: #b0b8c1; max-width: 600px; margin: 0 auto; font-size: 17px; line-height: 1.6; }
+        .features p { color: #b0b8c1; max-width: 550px; margin: 0 auto; font-size: 17px; }
+
+        /* Footnote / Legal Statement Footer as requested */
+        footer {
+            background: #030a12;
+            padding: 40px 20px;
+            text-align: center;
+            color: #616e7c;
+            font-size: 13px;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer a { color: #8a99ad; text-decoration: none; font-weight: 600; }
+        footer a:hover { color: #ff0000; }
+        .footer-line { margin-bottom: 8px; }
 
         /* Mobile Adjustments */
         @media (max-width: 600px) {
             header { padding: 15px 20px; }
-            .hero { padding-top: 120px; }
+            .hero { padding-top: 130px; }
             .hero h1 { font-size: 28px; }
             .header-actions { gap: 8px; }
             .btn-link { padding: 8px 14px; font-size: 13px; }
@@ -167,11 +176,11 @@
     </div>
 
     <header>
-        <a href="https://real-zeetex.vercel.app/" target="_blank" class="logo-link">
+        <a href="https://real-zeetex.vercel.app" class="logo-link">
             <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="30,5 70,5 95,30 95,70 70,95 30,95 5,70 5,30" fill="none" stroke="#ff0000" stroke-width="2.5"/>
-                <polygon points="31.5,7.5 68.5,7.5 92.5,31.5 92.5,68.5 68.5,92.5 31.5,92.5 7.5,68.5 7.5,31.5" fill="none" stroke="#ff0000" stroke-width="0.8"/>
-                <polygon points="50,20 57.5,41 82,41 62,55.5 69.5,76.5 50,62.5 30.5,76.5 38,55.5 18,41 42.5,41" fill="#ff0000"/>
+                <polygon points="30,5 70,5 95,30 95,70 70,95 30,95 5,70 5,30" fill="none" stroke="#ff0000" stroke-width="3"/>
+                <polygon points="31.5,7.5 68.5,7.5 92.5,31.5 92.5,68.5 68.5,92.5 31.5,92.5 7.5,68.5 7.5,31.5" fill="none" stroke="#ff0000" stroke-width="1"/>
+                <polygon points="50,15 59,38 84,38 64,53 71,76 50,61 29,76 36,53 16,38 41,38" fill="#ff0000"/>
             </svg>
         </a>
 
@@ -182,20 +191,30 @@
     </header>
 
     <section class="hero">
-        <h1>Innovative Official <span>Auto-Trading</span> Bot System</h1>
-        <p>No manual trades required. Zeetex lightning-fast bot automatically executes optimal trades for you instantly, optimized to run perfectly even on slow internet connections.</p>
+        <h1>Innovative Telegram Bot for Smart Auto Trading</h1>
+        <p>A lightning-fast trading system designed to execute high-performance trades instantly, even under low internet bandwidth conditions. No external extensions needed.</p>
         
-        <a href="https://t.me/Zeetex_Trading_Bot?start=8634059862" target="_blank" class="cta-btn">Start Free Auto-Trading Bot</a>
+        <a href="https://t.me/Zeetex_Trading_Bot?start=8634059862" target="_blank" class="cta-btn">Create a free Zeetex account</a>
         
-        <small>* Secure ecosystem integrated by Magic Scripts. No third-party extensions required.</small>
+        <small>* Get instant access to built-in secure auto execution modules.</small>
 
-        <img src="main.platform.png" alt="Zeetex Trading Platform Preview" class="dashboard-preview">
+        <img src="main.platform.png" alt="Zeetex Trading Bot Engine" class="dashboard-preview">
     </section>
 
     <section class="features">
-        <h2>Performance & Absolute Safety</h2>
-        <p>We have completely transitioned to a standalone Telegram bot engine to save bandwidth, eliminate execution delays, and secure your accounts from malicious third-party scripts.</p>
+        <h2>Features of the Bot</h2>
+        <p>We regularly improve our algorithmic parameters to make your auto trading secure, seamless, and completely automated.</p>
     </section>
+
+    <footer>
+        <div class="footer-line">
+            The platform administration is the exclusive corporate owner of the official domain: 
+            <a href="https://real-zeetex.vercel.app" target="_blank">real-zeetex.vercel.app</a>
+        </div>
+        <div class="footer-line">
+            Registered ® 2026 Zeetex. All rights reserved.
+        </div>
+    </footer>
 
 </body>
 </html>
