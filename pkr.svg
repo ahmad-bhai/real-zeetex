@@ -1,0 +1,10 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Green Circle Background -->
+  <circle cx="50" cy="50" r="45" fill="#006600" />
+  
+  <!-- Crescent (Chand) -->
+  <path d="M55,25 A30,30 0 1,0 55,75 A22,22 0 1,1 55,25" fill="#FFFFFF" />
+  
+  <!-- Star (Tara) -->
+  <path d="M68,35 L71,45 L80,45 L73,50 L76,60 L68,54 L60,60 L63,50 L56,45 L65,45 Z" fill="#FFFFFF" />
+</svg>
