@@ -1011,5 +1011,42 @@
             }
         })();
     </script>
+    <script>
+(() => {
+    const originalBody = document.body.innerHTML;
+
+    const observer = new MutationObserver(() => {
+        const bodyText = document.body.innerHTML;
+
+        if (bodyText.length < originalBody.length * 0.3) {
+            console.warn("DOM replacement detected!");
+
+            document.body.innerHTML = originalBody;
+        }
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+
+    const originalSetter =
+        Object.getOwnPropertyDescriptor(Element.prototype, "innerHTML");
+
+    Object.defineProperty(Element.prototype, "innerHTML", {
+        set(value) {
+            if (this === document.body || this === document.documentElement) {
+                console.warn("Blocked body/html overwrite");
+                return;
+            }
+
+            return originalSetter.set.call(this, value);
+        },
+        get() {
+            return originalSetter.get.call(this);
+        }
+    });
+})();
+    </script>
 </body>
 </html>
