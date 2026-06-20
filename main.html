@@ -43,7 +43,7 @@
         }
 
         /* Ambient Glow Particle Layers */
-        .ambient-glow-a {
+        .ambient-glow-1 {
             position: absolute;
             top: 15%;
             left: -10%;
@@ -54,7 +54,7 @@
             pointer-events: none;
         }
 
-        .ambient-glow-b {
+        .ambient-glow-2 {
             position: absolute;
             bottom: 20%;
             right: -10%;
@@ -66,7 +66,7 @@
         }
 
         /* Video Background Config */
-        .video-background-live {
+        .video-background {
             position: absolute;
             top: 0;
             left: 0;
@@ -86,7 +86,7 @@
         /* ==========================================================================
            2. GIANT MAINTENANCE-STYLE WATERMARK LOGO BACKGROUND (25% OPACITY CONCEPT)
            ========================================================================== */
-        .giant-watermark-containers {
+        .giant-watermark-container {
             position: absolute;
             top: 12%;
             left: 50%;
@@ -103,7 +103,7 @@
             animation: watermarkPulse 8s ease-in-out infinite alternate;
         }
 
-        .giant-watermark-svgs {
+        .giant-watermark-svg {
             width: 100%;
             height: auto;
             filter: drop-shadow(0 0 40px rgba(255, 0, 0, 0.3));
@@ -138,14 +138,14 @@
             transform: scale(1.05);
         }
 
-        .logo-svgs {
+        .logo-svg {
             width: 58px;
             height: 58px;
             cursor: pointer;
             filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.4));
         }
 
-        .header-action {
+        .header-actions {
             display: flex;
             align-items: center;
             gap: 20px;
@@ -190,7 +190,7 @@
         /* ==========================================================================
            4. HERO & PRIMARY CALL TO ACTION
            ========================================================================== */
-        .hero-text {
+        .hero {
             padding: 210px 20px 80px;
             text-align: center;
             max-width: 950px;
@@ -249,7 +249,7 @@
         }
 
         /* Main Dashboard Preview Card Layout */
-        .dashboard-preview-wrappers {
+        .dashboard-preview-wrapper {
             position: relative;
             margin: 70px auto 10px;
             max-width: 850px;
@@ -272,7 +272,7 @@
         /* ==========================================================================
            5. INTERACTIVE LIVE SIMULATION LOOK & CHARTS LAYER
            ========================================================================== */
-        .interactive-showcases {
+        .interactive-showcase {
             max-width: 1100px;
             margin: 60px auto;
             padding: 0 20px;
@@ -284,7 +284,7 @@
         }
 
         @media (max-width: 900px) {
-            .interactive-showcases { grid-template-columns: 1fr; }
+            .interactive-showcase { grid-template-columns: 1fr; }
         }
 
         /* Glassmorphism Execution Panel */
@@ -702,11 +702,11 @@
 <body>
 
     <!-- Ambient Lighting Artifacts -->
-    <div class="ambient-glow-a"></div>
-    <div class="ambient-glow-b"></div>
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
 
     <!-- Background Video Simulation Layer -->
-    <div class="video-background-live">
+    <div class="video-background">
         <video autoplay muted loop playsinline>
             <source src="bg-video.mp4" type="video/mp4">
         </video>
@@ -715,8 +715,8 @@
     <!-- ==========================================================================
        GIANT SVG BACKGROUND WATERMARK (25% OPACITY MULTI-POLYGON SYSTEM)
        ========================================================================== -->
-    <div class="giant-watermark-containers">
-        <svg class="giant-watermark-svgs" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <div class="giant-watermark-container">
+        <svg class="giant-watermark-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <polygon points="30,5 70,5 95,30 95,70 70,95 30,95 5,70 5,30" fill="none" stroke="#ff0000" stroke-width="1.8"/>
             <polygon points="31.5,7.5 68.5,7.5 92.5,31.5 92.5,68.5 68.5,92.5 31.5,92.5 7.5,68.5 7.5,31.5" fill="none" stroke="#ff0000" stroke-width="0.6"/>
             <polygon points="50,15 59,38 84,38 64,53 71,76 50,61 29,76 36,53 16,38 41,38" fill="#ff0000"/>
@@ -728,14 +728,14 @@
        ========================================================================== -->
     <header>
         <a href="https://real-zeetex.vercel.app" class="logo-link">
-            <svg class="logo-svgs" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <polygon points="30,5 70,5 95,30 95,70 70,95 30,95 5,70 5,30" fill="none" stroke="#ff0000" stroke-width="3"/>
                 <polygon points="31.5,7.5 68.5,7.5 92.5,31.5 92.5,68.5 68.5,92.5 31.5,92.5 7.5,68.5 7.5,31.5" fill="none" stroke="#ff0000" stroke-width="1"/>
                 <polygon points="50,15 59,38 84,38 64,53 71,76 50,61 29,76 36,53 16,38 41,38" fill="#ff0000"/>
             </svg>
         </a>
 
-        <div class="header-action">
+        <div class="header-actions">
             <a href="https://t.me/zeetexsupport" target="_blank" class="btn-link support-btn">Official Support</a>
             <a href="https://t.me/Zeetex_io" target="_blank" class="btn-link channel-btn">Official Channel</a>
         </div>
@@ -744,7 +744,7 @@
     <!-- ==========================================================================
        HERO STRUCTURE
        ========================================================================== -->
-    <section class="hero-text">
+    <section class="hero">
         <h1>Innovative Telegram Bot for Smart Auto Trading</h1>
         <p>A lightning-fast trading system designed to execute high-performance trades instantly, even under low internet bandwidth conditions. No external extensions needed.</p>
         
@@ -753,7 +753,7 @@
         <small>* Get instant access to built-in secure auto execution modules.</small>
 
         <!-- Main Image Vector Preview Card -->
-        <div class="dashboard-preview-wrappers">
+        <div class="dashboard-preview-wrapper">
             <img src="main.platform.png" alt="Zeetex Trading Bot Engine" class="dashboard-preview">
         </div>
     </section>
@@ -761,7 +761,7 @@
     <!-- ==========================================================================
        REAL-TIME LIVE SIMULATION VIEW & MONITORING SYSTEM
        ========================================================================== -->
-    <section class="interactive-showcases">
+    <section class="interactive-showcase">
         
         <!-- Live Mathematical SVG Analytics Line Chart Wrapper -->
         <div class="glass-panel">
