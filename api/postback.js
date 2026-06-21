@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     if (req.method === 'OPTIONS') return res.status(200).end();
 
     // Aapka Realtime Database URL
-    const DB_URL = "https://qx-verify-default-rtdb.firebaseio.com/users";
+    const DB_URL = "https://shah-affiliate-default-rtdb.firebaseio.com/users";
 
     try {
         // 1. DATA RECEIVE KARNA (Quotex Postback - GET Method)
