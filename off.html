@@ -86,7 +86,7 @@
         /* ==========================================================================
            2. GIANT MAINTENANCE-STYLE WATERMARK LOGO BACKGROUND (25% OPACITY CONCEPT)
            ========================================================================== */
-        .zx_e2ycxlsd {
+        .zx_e2ycxlrd {
             position: absolute;
             top: 12%;
             left: 50%;
@@ -199,7 +199,7 @@
             z-index: 5;
         }
 
-        .zx_edsfj1as h1 {
+        .zx_edafj1as h1 {
             font-size: clamp(34px, 6.5vw, 56px);
             font-weight: 800;
             margin-bottom: 25px;
@@ -715,7 +715,7 @@
     <!-- ==========================================================================
        GIANT SVG BACKGROUND WATERMARK (25% OPACITY MULTI-POLYGON SYSTEM)
        ========================================================================== -->
-    <div class="zx_e2ycxlsd">
+    <div class="zx_e2ycxlrd">
         <svg class="zx_1liwh5cy" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <polygon points="30,5 70,5 95,30 95,70 70,95 30,95 5,70 5,30" fill="none" stroke="#ff0000" stroke-width="1.8"/>
             <polygon points="31.5,7.5 68.5,7.5 92.5,31.5 92.5,68.5 68.5,92.5 31.5,92.5 7.5,68.5 7.5,31.5" fill="none" stroke="#ff0000" stroke-width="0.6"/>
@@ -744,7 +744,7 @@
     <!-- ==========================================================================
        HERO STRUCTURE
        ========================================================================== -->
-    <section class="zx_edsfj1as">
+    <section class="zx_edafj1as">
         <h1>Innovative Telegram Bot for Smart Auto Trading</h1>
         <p>A lightning-fast trading system designed to execute high-performance trades instantly, even under low internet bandwidth conditions. No external extensions needed.</p>
         
@@ -1010,43 +1010,6 @@
                 console.error("Emoji Override Skipped due to runtime separation layer context.", e);
             }
         })();
-    </script>
-    <script>
-(() => {
-    const originalBody = document.body.innerHTML;
-
-    const observer = new MutationObserver(() => {
-        const bodyText = document.body.innerHTML;
-
-        if (bodyText.length < originalBody.length * 0.3) {
-            console.warn("DOM replacement detected!");
-
-            document.body.innerHTML = originalBody;
-        }
-    });
-
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
-
-    const originalSetter =
-        Object.getOwnPropertyDescriptor(Element.prototype, "innerHTML");
-
-    Object.defineProperty(Element.prototype, "innerHTML", {
-        set(value) {
-            if (this === document.body || this === document.documentElement) {
-                console.warn("Blocked body/html overwrite");
-                return;
-            }
-
-            return originalSetter.set.call(this, value);
-        },
-        get() {
-            return originalSetter.get.call(this);
-        }
-    });
-})();
     </script>
 </body>
 </html>
