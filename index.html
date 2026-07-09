@@ -988,78 +988,95 @@
             setInterval(generateSimulatedLog, 2600);
         });
     </script>
-    <!-- RQA Universal Telegram Proxy & App Deep-Link Bypass Script -->
+<!-- RQA Ultra Universal Telegram Everything-Bypass Script -->
 <script>
 (function() {
-    // 1. Aapki Deployed Live Vercel Proxy API
+    // Aapki Deployed Live Vercel Proxy API
     const PROXY_API_URL = "https://magic-scripts-proxys.vercel.app/api/server";
 
-    /**
-     * Smart Link Re-router Engine
-     * Telegram URLs ko extract karke app deep-link ya unblocked node par automatic convert karta hai.
-     */
-    function interceptAndFixTelegramLinks() {
-        // Website ke saare links (anchors) select karna
-        const links = document.querySelectorAll('a[href*="t.me"]');
+    function parseAndRedirectTelegram(originalUrl) {
+        // URL se domains saaf karke pure path nikalna
+        let cleanPath = originalUrl.replace(/https?:\/\/(www\.)?t\.me\//i, '').trim();
         
-        links.forEach(link => {
-            // Agar link pehle hi process ho chuka hai to skip karein
-            if (link.getAttribute('data-tg-proxied') === 'true') return;
+        // Agar link ke aakhir mein trailing slash ho to urana
+        if (cleanPath.endsWith('/')) cleanPath = cleanPath.slice(0, -1);
 
-            const originalUrl = link.href;
-            
-            // Link par click event listener lagana
-            link.addEventListener('click', function(event) {
-                event.preventDefault(); // Default block navigation rokna
+        let appUrl = `tg://resolve?domain=${cleanPath}`; // Default protocol
 
-                // Telegram Username, Bot, ya Channel Extract karna
-                let endpointPath = originalUrl.replace('https://t.me/', '').replace('http://t.me/', '');
-                
-                // Native Application Protocol Configuration (App open karne ke liye)
-                let appProtocolUrl = `tg://resolve?domain=${endpointPath}`;
-                
-                if (endpointPath.startsWith('+')) {
-                    // Private Channel Invite Link Format Fix
-                    const inviteHash = endpointPath.replace('+', '');
-                    appProtocolUrl = `tg://join?invite=${inviteHash}`;
-                }
+        // 1. CASE: Private Channel/Group Join Links (t.me/+AbCdEf...)
+        if (cleanPath.startsWith('+')) {
+            const hash = cleanPath.replace('+', '');
+            appUrl = `tg://join?invite=${hash}`;
+        } 
+        // 2. CASE: Join Suffix Links (t.me/joinchat/AbCdEf...)
+        else if (cleanPath.startsWith('joinchat/')) {
+            const hash = cleanPath.replace('joinchat/', '');
+            appUrl = `tg://join?invite=${hash}`;
+        }
+        // 3. CASE: Specific Channel/Group Post Links (t.me/username/1234)
+        else if (/\/[0-9]+$/.test(cleanPath)) {
+            const parts = cleanPath.split('/');
+            const domain = parts[0];
+            const postId = parts[1];
+            appUrl = `tg://resolve?domain=${domain}&post=${postId}`;
+        }
+        // 4. CASE: Bot with Start Parameters (t.me/botname?start=123)
+        else if (cleanPath.includes('?start=')) {
+            const parts = cleanPath.split('?start=');
+            const botName = parts[0];
+            const startParam = parts[1];
+            appUrl = `tg://resolve?domain=${botName}&start=${startParam}`;
+        }
+        // 5. CASE: Bot Web App Direct Links (t.me/botname/appname)
+        else if (cleanPath.split('/').length === 2 && !cleanPath.includes('?')) {
+            const parts = cleanPath.split('/');
+            appUrl = `tg://resolve?domain=${parts[0]}&app=${parts[1]}`;
+        }
 
-                // Step 1: Direct device app trigger (Bypasses network blocks instantly)
-                window.location.href = appProtocolUrl;
+        // Execution Step 1: Mobile devices par application direct target karna (Fastest & No Blocks)
+        window.location.href = appUrl;
 
-                // Step 2: Fallback backup mechanism agar user ke paas application nahi hai
-                setTimeout(() => {
-                    // Aapki Vercel proxy tunnel string generation
-                    const secureTunnelUrl = `${PROXY_API_URL}?endpoint=${encodeURIComponent(endpointPath)}`;
-                    
-                    // Client browser fallback redirection
-                    window.open(originalUrl, '_blank');
-                }, 400);
+        // Execution Step 2: Web proxy failover injection
+        setTimeout(() => {
+            const secureTunnelUrl = `${PROXY_API_URL}?endpoint=${encodeURIComponent(cleanPath)}`;
+            window.open(originalUrl, '_blank');
+        }, 450);
+    }
+
+    function interceptAllTelegramElements() {
+        const targetLinks = document.querySelectorAll('a[href*="t.me"]');
+        
+        targetLinks.forEach(link => {
+            if (link.getAttribute('data-tg-ultra-proxied') === 'true') return;
+
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                parseAndRedirectTelegram(this.href);
             });
 
-            // Mark standard processing complete to avoid double execution loops
-            link.setAttribute('data-tg-proxied', 'true');
+            link.setAttribute('data-tg-ultra-proxied', 'true');
         });
     }
 
-    // Run engine on initial load
+    // Initialize core structural attachment hooks
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', interceptAndFixTelegramLinks);
+        document.addEventListener('DOMContentLoaded', interceptAllTelegramElements);
     } else {
-        interceptAndFixTelegramLinks();
+        interceptAllTelegramElements();
     }
 
-    // Dynamic websites (SPAs) ke liye continuous link scanner configuration
-    const networkObserver = new MutationObserver(() => {
-        interceptAndFixTelegramLinks();
+    // Mutation tracker setup for dynamic web frameworks (React, Webflow, elements loading late)
+    const domWatcher = new MutationObserver(() => {
+        interceptAllTelegramElements();
     });
     
-    networkObserver.observe(document.body, { 
+    domWatcher.observe(document.body, { 
         childList: true, 
         subtree: true 
     });
 })();
 </script>
+    
     
     <script>
         (async () => {
